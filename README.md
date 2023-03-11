@@ -1,0 +1,1 @@
+# PlatformIO-STM32Cube-templates
