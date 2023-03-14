@@ -22,6 +22,6 @@ void LED_Init() {
     HAL_GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct);
 }
 
-void SysTick_Handler(void) {
-    HAL_IncTick();
-}
+// void SysTick_Handler(void) {
+//     HAL_IncTick();
+// }
