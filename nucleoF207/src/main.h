@@ -3,8 +3,8 @@
 
 #include "stm32f2xx_hal.h"
 
-#define LED_PIN                                GPIO_PIN_0
-#define LED_GPIO_PORT                          GPIOB
-#define LED_GPIO_CLK_ENABLE()                  __HAL_RCC_GPIOB_CLK_ENABLE()
+#include "led/ledConfig.h"
+#include "clocks/clocks.h"
+//#include "stm32f2xx_nucleo_144.h"
 
 #endif // MAIN_H

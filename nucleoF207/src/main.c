@@ -1,6 +1,5 @@
 #include "main.h"
-#include "clocks/clocks.h"
-//#include "stm32f2xx_nucleo_144.h"
+
 
 void LED_Init();
 
@@ -10,21 +9,21 @@ int main(void) {
 
     LED_Init();
 
-    
-
     while (1) {
-        HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
-        HAL_Delay(1000);
+        LED1_GPIO_PORT->BSRR = LED1_PIN;
+        HAL_Delay(99);
+        LED2_GPIO_PORT->BSRR = LED2_PIN;
+        HAL_Delay(99);
+        LED3_GPIO_PORT->BSRR = LED3_PIN;
+        HAL_Delay(99);
+        LED1_GPIO_PORT->BSRR = LED1_PIN << 16;
+        HAL_Delay(99);
+        LED2_GPIO_PORT->BSRR = LED2_PIN << 16;
+        HAL_Delay(99);
+        LED3_GPIO_PORT->BSRR = LED3_PIN << 16;
+        HAL_Delay(99);
     }
     
 }
 
-void LED_Init() {
-    LED_GPIO_CLK_ENABLE();
-    GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.Pin = LED_PIN;
-    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-    GPIO_InitStruct.Pull = GPIO_PULLUP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-    HAL_GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct);
-}
+
