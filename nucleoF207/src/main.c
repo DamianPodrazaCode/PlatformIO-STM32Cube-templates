@@ -1,5 +1,6 @@
 #include "main.h"
 #include "clocks.h"
+//#include "stm32f2xx_nucleo_144.h"
 
 void LED_Init();
 
@@ -9,10 +10,13 @@ int main(void) {
 
     LED_Init();
 
+    
+
     while (1) {
         HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
         HAL_Delay(1000);
     }
+    
 }
 
 void LED_Init() {

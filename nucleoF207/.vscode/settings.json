@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "stm32f2xx_nucleo_144.h": "c"
+    }
+}
