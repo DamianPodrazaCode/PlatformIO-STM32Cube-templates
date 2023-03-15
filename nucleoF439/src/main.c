@@ -1,7 +1,5 @@
 #include "main.h"
 
-void LED_Init();
-
 int main(void) {
     HAL_Init();
     SystemClock_Config();
